@@ -1,12 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Finconsultant</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>vakosbeton</title>
 </head>
 <body>
     
+    <header class="header">
+        <div class="header__slider">
+            <div class="header__slide">
+                <img src="./img/content/slide1.png" alt="vakosbeton">
+            </div>
+            <div class="header__slide">
+                <img src="./img/content/slide1.png" alt="vakosbeton">
+            </div>
+            <div class="header__slide">
+                <img src="./img/content/slide1.png" alt="vakosbeton">
+            </div>
+        </div>
+        <div class="container">
+            <div class="header__logo-phones">
+                <div class="row">
+                    <div class="col-6 header__logo">
+                        <img src="./img/content/logo.png" alt="vakosbeton">
+                    </div>
+                    <div class="col-6 header__phones">
+                        <ul>
+                            <li><a href="tel:+380963334333"><span>Тячев</span> +38 (096) 333 43 33</a></li>
+                            <li><a href="tel:+380973334333"><span>смт. Ясиня</span> +38 (097) 333 43 33</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <menu class="header__menu">
+            <div class="container">
+                <li><a href="#">ГОЛОВНА</a></li>
+                <li><a href="#">КОМПАНІЯ</a></li>
+                <li><a href="#">ІНФОРМАЦІЯ</a></li>
+                <li><a href="#">ПРОДУКЦІЇ</a></li>
+                <li><a href="#">КОНТАКТИ</a></li>
+            </div>
+        </menu>
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <!-- <h1 class="header__title">Бетоний завод VAKOS в Західній Україні Найкращий по Закарпаттю</h1> -->
+                </div>
+                <div class="col-5 header__form">
+                    <p class="title">Залишити заявку</p>
+                    <form>
+                        <input type="text" name="name" placeholder="Имя *" required>
+                        <input type="tel" name="phone" placeholder="Телефон *" required>
+                        <input type="submit" value="Замовити">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="header__advantages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 header__advantages-item">
+                        <div class="image-block">
+                            <img src="./img/elements/icon-quality.png" alt="vakosbeton">
+                        </div>
+                        <p class="title">Якість</p>
+                        <p class="description">Дотримуємося всіх норм виробництва</p>
+                    </div>
+                    <div class="col-4 header__advantages-item">
+                        <div class="image-block">
+                            <img src="./img/elements/icon-efficiency.png" alt="vakosbeton">
+                        </div>
+                        <p class="title">Оперативність</p>
+                        <p class="description">Можемо дуже швидко виготовити та доставити Вам бетон</p>
+                    </div>
+                    <div class="col-4 header__advantages-item">
+                        <div class="image-block">
+                            <img src="./img/elements/icon-truck.png" alt="vakosbeton">
+                        </div>
+                        <p class="title">Бетононосос</p>
+                        <p class="description">Подача бетону на висоту 36м без крану</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="offer">
+        <div class="container">
+            <h2 class="section-title">Ми пропонуємо</h2>
+            <div class="row">
+                <div class="col-6 offer__item">
+                    <div class="image-block">
+                        <img src="./img/content/beton.png" alt="vakosbeton">
+                    </div>
+                    <p class="title">Бетон</p>
+                </div>
+                <div class="col-6 offer__item">
+                    <div class="image-block">
+                        <img src="./img/content/beton.png" alt="vakosbeton">
+                    </div>
+                    <p class="title">ЗБВ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="how">
+        <div class="container">
+            <h2 class="section-title">Як ми працюємо</h2>
+            <div class="how__content">
+                <div class="image-block">
+                    <img src="./img/content/how-img.png" alt="vakosbeton">
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="how__item how__item--first">
+                            <p class="title">заявка</p>
+                            <p class="description">Заповніть форму на сайті</p>
+                        </div>
+                        <div class="how__item how__item--second">
+                            <p class="title">Звінок</p>
+                            <p class="description">Наш менеджер зв'яжеться з вами</p>
+                        </div>
+                        <div class="how__item how__item--second">
+                            <p class="title">Розрахунок</p>
+                            <p class="description">Ми допоможемо разрахувати об'єм</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="how__item how__item--second">
+                            <p class="title">Оплата</p>
+                            <p class="description">Ви оплачуєте заказ, як Вам зручно</p>
+                        </div>
+                        <div class="how__item how__item--second">
+                            <p class="title">Доставка</p>
+                            <p class="description">Ми доставляємо у вказаний час</p>
+                        </div>
+                        <div class="how__item how__item--second">
+                            <p class="title">готово</p>
+                            <p class="description">Задоволені результатом</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certificates">
+        <div class="container">
+            <h2 class="section-title">Ліцензії та сертифікати</h2>
+            <div class="certificates__slider">
+                <div class="certificates__slide">
+                    <img src="./img/content/sertificate.png" alt="vakosbeton">
+                </div>
+                <div class="certificates__slide">
+                    <img src="./img/content/sertificate.png" alt="vakosbeton">
+                </div>
+                <div class="certificates__slide">
+                    <img src="./img/content/sertificate.png" alt="vakosbeton">
+                </div>
+                <div class="certificates__slide">
+                    <img src="./img/content/sertificate.png" alt="vakosbeton">
+                </div>
+                <div class="certificates__slide">
+                    <img src="./img/content/sertificate.png" alt="vakosbeton">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form">
+        <div class="container">
+            <h2 class="section-title">Залишити заявку</h2>
+            <form action="#">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" name="name" placeholder="Имя *" required>
+                    </div>
+                    <div class="col-4">
+                        <input type="tel" name="phone" placeholder="Телефон *" required>
+                    </div>
+                    <div class="col-4">
+                        <input type="submit" value="Замовити">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">портфоліо</h2>
+            <div class="row">
+                <div class="col-4 portfolio__item">
+                    <p class="title">Бетон для промислової підлоги</p>
+                    <div class="image-block">
+                        <img src="./img/content/portfolio1.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-4 portfolio__item">
+                    <p class="title">Бетон для промислової підлоги</p>
+                    <div class="image-block">
+                        <img src="./img/content/portfolio2.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-4 portfolio__item">
+                    <p class="title">Бетон для промислової підлоги</p>
+                    <div class="image-block">
+                        <img src="./img/content/portfolio3.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-4 portfolio__item">
+                    <p class="title">Бетон для промислової підлоги</p>
+                    <div class="image-block">
+                        <img src="./img/content/portfolio4.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-4 portfolio__item">
+                    <p class="title">Бетон для промислової підлоги</p>
+                    <div class="image-block">
+                        <img src="./img/content/portfolio5.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-4 portfolio__item">
+                    <p class="title">Бетон для промислової підлоги</p>
+                    <div class="image-block">
+                        <img src="./img/content/portfolio6.png" alt="vakosbeton">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">Наші партнери</h2>
+            <div class="row">
+                <div class="col-3 partners__item">
+                    <div class="image-block">
+                        <img src="./img/content/melnik.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-3 partners__item">
+                    <div class="image-block">
+                        <img src="./img/content/miskbud.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-3 partners__item">
+                    <div class="image-block">
+                        <img src="./img/content/vambud.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-3 partners__item">
+                    <div class="image-block">
+                        <img src="./img/content/tdv.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-3 partners__item">
+                    <div class="image-block">
+                        <img src="./img/content/citadel.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-3 partners__item">
+                    <div class="image-block">
+                        <img src="./img/content/bvb.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-3 partners__item">
+                    <div class="image-block">
+                        <img src="./img/content/blago.png" alt="vakosbeton">
+                    </div>
+                </div>
+                <div class="col-3 partners__item">
+                    <div class="image-block">
+                        <img src="./img/content/mjk.png" alt="vakosbeton">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <div class="container">
+            <div class="map__form">
+                <form action="#">
+                    <p class="title"><span>Vakos </span>Бетон</p>
+                    <a href="tel:+38 (096) 333-4-333" class="phone">+38 (096) 333-4-333</a>
+                    <a href="" class="location">Тячів, вул. Промислова 7</a>
+                    <input type="text" name="name" placeholder="Имя *" required>
+                    <input type="tel" name="phone" placeholder="Телефон *" required>
+                    <input type="submit" value="Відправити">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 footer__copyright">
+                    <p>Copyright © 2019. Vakos Beton</p>
+                </div>
+                <div class="col-6 footer__social">
+                    <a href="#"><img src="./img/content/facebook-logo.svg" alt="vakosbeton"></a>
+                    <a href="#"><img src="./img/content/logo-instagram.svg" alt="vakosbeton"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="menu-btn">
+        <span></span>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="./js/scripts.min.js"></script>
+
 </body>
 </html>
