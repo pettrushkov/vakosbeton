@@ -8,6 +8,12 @@
 @import 'home';
 @import 'footer';
 
+body {
+    font-family: $fontProximaNovaLight;
+    font-size: 18px;
+    line-height: 22px;
+}
+
 #menu-btn {
     position: fixed;
     top: 20px;
@@ -62,4 +68,13 @@
             bottom: -0px;
         }
     }
+}
+
+.section-title {
+    font-family: $fontProximaNovaBold;
+    font-size: 35px;
+    line-height: 50px;
+    color: #0b436c;
+    text-align: center;
+    text-transform: uppercase;
 }
