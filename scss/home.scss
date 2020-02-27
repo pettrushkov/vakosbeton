@@ -1,6 +1,12 @@
 .offer {
     padding: 220px 0 80px;
     background-color: #fff;
+    @include mediaw(767px) {
+        padding: 610px 0 80px;
+    }
+    @include mediaw(576px) {
+        padding: 435px 0 40px;
+    }
     .row {
         margin-top: 20px;
         display: flex;
@@ -10,6 +16,16 @@
         position: relative;
         height: 330px;
         max-width: calc(50% - 15px);
+        @include mediaw(576px) {
+            max-width: initial;
+            margin: 0 15px;
+            height: 250px;
+        }
+        &:nth-child(2) {
+            @include mediaw(576px) {
+                margin-top: 15px;
+            }
+        }
         .image-block {
             position: absolute;
             top: 0;
@@ -47,6 +63,9 @@
     min-height: 576px;
     background-color: #f1f9ff;
     position: relative;
+    @include mediaw(576px) {
+        padding: 50px 0 20px;
+    }
     &::before {
         content: " ";
         display: block;
@@ -62,10 +81,17 @@
     &__content {
         margin-top: 145px;
         position: relative;
+        @include mediaw(991px) {
+            margin-top: 15px;
+        }
         .image-block {
+            @include mediaw(991px) {
+                margin-top: 30px;
+            }
             img {
                 display: block;
                 margin: 0 auto;
+                max-width: 100%;
             }
         }
         .row {
@@ -73,9 +99,15 @@
             width: 100%;
             top: -130px;
             left: 0;
+            @include mediaw(991px) {
+                position: static;
+            }
             div[class^="col-"]:first-child {
                 display: flex;
                 flex-direction: column-reverse;
+                @include mediaw(991px) {
+                    display: block;
+                }
             }
         }
     }
@@ -84,6 +116,9 @@
         padding-left: 75px;
         position: relative;
         max-width: 290px;
+        @include mediaw(991px) {
+            margin-top: 15px;
+        }
         &::before {
             content: " ";
             display: block;
@@ -106,36 +141,63 @@
         }
         &--first {
             transform: translateX(23px);
+            @include mediaw(1199px) {
+                transform: translateX(-22px);
+            }
+            @include mediaw(991px) {
+                transform: initial;
+            }
             &::before {
                 background-image: url(../img/elements/icon-zayazvka.png);
             }
         }
         &--second {
             transform: translateX(106px);
+            @include mediaw(1199px) {
+                transform: translateX(56px);
+            }
+            @include mediaw(991px) {
+                transform: initial;
+            }
             &::before {
                 background-image: url(../img/elements/icon-zvonok.png);
             }
         }
         &--third {
             transform: translateX(215px);
+            @include mediaw(1199px) {
+                transform: translateX(165px);
+            }
+            @include mediaw(991px) {
+                transform: initial;
+            }
             &::before {
                 background-image: url(../img/elements/icon-rozrahunok.png);
             }
         }
         &--fourth {
             transform: translateX(85px);
+            @include mediaw(991px) {
+                transform: initial;
+            }
             &::before {
                 background-image: url(../img/elements/icon-oplata.png);
             }
         }
         &--fifth {
             transform: translateX(180px);
+            @include mediaw(991px) {
+                transform: initial;
+            }
             &::before {
                 background-image: url(../img/elements/icon-dostavka.png);
             }
         }
         &--sixth {
             transform: translateX(229px);
+            @include mediaw(991px) {
+                transform: initial;
+            }
             &::before {
                 background-image: url(../img/elements/icon-gotovo.png);
             }
@@ -146,13 +208,20 @@
 .certificates {
     padding: 115px 0 50px;
     background-color: #fff;
+    @include mediaw(576px) {
+        padding: 40px 0 0;
+    }
     &__slider {
         margin-top: 20px;
+        @include mediaw(576px) {
+            margin: 14px;
+        }
         .slick-arrow {
             width: 14px;
             height: 22px;
             transition: background-color .3s;
             background-size: cover;
+            z-index: 1;
             &.slick-prev {
                 background-image: url(../img/elements/left-arrow-gradient.png);
             }
@@ -185,14 +254,16 @@
 .form {
     background-image: url(../img/elements/background-form.png);
     background-size: cover;
+    padding: 10px 0;
     .section-title {
         color: #fff;
     }
     .container {
-        margin-top: 10px;
-        margin-bottom: 10px;
         padding: 55px 35px 70px;
         background-color: rgba(255,255,255,0.1);
+        @include mediaw(576px) {
+            padding: 30px 15px 50px;
+        }
     }
     form {
         display: block;
@@ -207,6 +278,9 @@
             color: #282828;
             font-size: 14px;
             padding: 0 50px 0 15px;
+            @include mediaw(767px) {
+                margin-top: 15px;
+            }
             &:focus {
                 border-color: #02e57d;
             }
@@ -254,8 +328,19 @@
 .portfolio {
     padding: 65px 0 80px;
     background-color: #fff;
+    .row {  
+        @include mediaw(576px) {
+            margin-top: 5px;
+        }
+    }
+    @include mediaw(576px) {
+        padding: 46px 0 56px;
+    }
     &__item {
         margin-top: 30px;
+        @include mediaw(576px) {
+            margin-top: 15px;
+        }
         .image-block {
             height: 245px;
             position: relative;
@@ -279,6 +364,9 @@
                 transition: opacity .3s;
                 color: #fff;
                 font-family: $fontProximaNovaBold;
+                @include mediaw(767px) {
+                    opacity: 1;
+                } 
             }
             &:hover .title {
                 opacity: 1;
@@ -292,13 +380,25 @@
     background-color: #f1f9ff;
     background-image: url(../img/elements/background-partners.png);
     background-size: cover;
+    @include mediaw(576px) {
+        padding: 50px 0 55px;
+    }
     .row {
         margin-top: 30px;
+        @include mediaw(576px) {
+            margin-top: 21px;
+        }
     }
     &__item {
         max-width: calc(25% - 10px);
         margin: 0.5px;
         background-color: #fff;
+        @include mediaw(767px) {
+            max-width: calc(50% - 1px);
+        }
+        @include mediaw(576px) {
+            max-width: calc(50% - 1px);
+        }
         .image-block {
             img {
                 max-width: 100%;
@@ -312,6 +412,10 @@
     height: 510px;
     display: flex;
     align-items: center;
+    @include mediaw(991px) {
+        height: initial;
+        display: block;
+    }
     iframe {
         display: block;
         position: absolute;
@@ -321,12 +425,21 @@
         height: 100%;
         z-index: -1;
         filter: grayscale(100%);
+        @include mediaw(991px) {
+            filter: initial;
+            position: static;
+            height: 400px;
+        }
     }
     &__form {
         background-color: #fff;
         padding: 20px 30px 30px;
         max-width: 350px;
         margin-left: auto;
+        @include mediaw(991px) {
+            margin: 20px auto;
+            box-shadow: 0 6px 20px 0 rgba(0,0,0,.13);
+        }
         .title {
             font-family: $fontProximaNovaRegular;
             font-size: 25px;

@@ -12,6 +12,10 @@ body {
     font-family: $fontProximaNovaLight;
     font-size: 18px;
     line-height: 22px;
+    @include mediaw(576px) {
+        font-size: 15px;
+        line-height: 17px;
+    }
 }
 
 #menu-btn {
@@ -24,7 +28,7 @@ body {
     display: none;
     align-items: center;
     cursor: pointer;
-    @include mediaw(992px) {
+    @include mediaw(767px) {
         display: flex;
     }
     span {
@@ -77,4 +81,55 @@ body {
     color: #0b436c;
     text-align: center;
     text-transform: uppercase;
+    @include mediaw(576px) {
+        font-size: 25px;
+        line-height: 35px;
+    }
+}
+
+.modal--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 999;
+    .modal {
+        text-align: center;
+        padding: 40px 20px;
+        width: initial;
+        height: initial;
+        background-color: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 300px;
+        z-index: 1000;
+        .modal--close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-image: url(../img/elements/close.svg);
+            background-size: cover;
+            opacity: 0.75;
+            width: 15px;
+            height: 15px;
+            padding: 2.5px;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .title {
+            font-family: $fontProximaNovaBold;
+            font-size: 20px;
+        }
+        .description {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+    }
 }
