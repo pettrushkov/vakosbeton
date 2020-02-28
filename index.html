@@ -16,13 +16,13 @@
     <header class="header">
         <div class="header__slider">
             <div class="header__slide">
-                <img src="https://picsum.photos/1920/653" alt="vakosbeton">
+                <img src="./img/content/image123.png" alt="vakosbeton">
             </div>
             <div class="header__slide">
-                <img src="https://picsum.photos/1920/654" alt="vakosbeton">
+                <img src="./img/content/image123.png" alt="vakosbeton">
             </div>
             <div class="header__slide">
-                <img src="https://picsum.photos/1920/655" alt="vakosbeton">
+                <img src="./img/content/image123.png" alt="vakosbeton">
             </div>
         </div>
         <div class="container">
@@ -42,11 +42,11 @@
         </div>
         <menu class="header__menu">
             <div class="container">
-                <li><a href="#">ГОЛОВНА</a></li>
-                <li><a href="#">КОМПАНІЯ</a></li>
-                <li><a href="#">ІНФОРМАЦІЯ</a></li>
-                <li><a href="#">ПРОДУКЦІЇ</a></li>
-                <li><a href="#">КОНТАКТИ</a></li>
+                <li><a href="#advantages">Переваги</a></li>
+                <li><a href="#how_we_work">Як ми працюємо</a></li>
+                <li><a href="#portfolio">Портфоліо</a></li>
+                <li><a href="#partners">Партнери</a></li>
+                <li><a href="#contacts">Контакти</a></li>
             </div>
         </menu>
         <div class="container">
@@ -72,7 +72,9 @@
                     <form>
                         <input type="text" name="name" placeholder="Имя *" required>
                         <input type="tel" name="phone" placeholder="Телефон *" required>
-                        <input type="submit" value="Замовити">
+                        <div class="submit-overlay">
+                            <input type="submit" value="Замовити">
+                        </div>
                     </form>
                 </div>
             </div>
@@ -82,21 +84,21 @@
                 <div class="row">
                     <div class="col-md-4 header__advantages-item">
                         <div class="image-block">
-                            <img src="./img/elements/icon-quality.png" alt="vakosbeton">
+                            <img src="./img/content/icon-quality.svg" alt="vakosbeton">
                         </div>
                         <p class="title">Якість</p>
                         <p class="description">Дотримуємося всіх норм виробництва</p>
                     </div>
                     <div class="col-md-4 header__advantages-item">
                         <div class="image-block">
-                            <img src="./img/elements/icon-efficiency.png" alt="vakosbeton">
+                            <img src="./img/content/icon-efficiency.svg" alt="vakosbeton">
                         </div>
                         <p class="title">Оперативність</p>
                         <p class="description">Можемо дуже швидко виготовити та доставити Вам бетон</p>
                     </div>
                     <div class="col-md-4 header__advantages-item">
                         <div class="image-block">
-                            <img src="./img/elements/icon-truck.png" alt="vakosbeton">
+                            <img src="./img/content/icon-truck.svg" alt="vakosbeton">
                         </div>
                         <p class="title">Бетононосос</p>
                         <p class="description">Подача бетону на висоту 36м без крану</p>
@@ -126,7 +128,7 @@
         </div>
     </section>
     
-    <section class="how">
+    <section class="how" id="how_we_work">
         <div class="container">
             <h2 class="section-title">Як ми працюємо</h2>
             <div class="how__content">
@@ -202,14 +204,16 @@
                         <input type="tel" name="phone" placeholder="Телефон *" required>
                     </div>
                     <div class="col-md-4">
-                        <input type="submit" value="Замовити">
+                        <div class="submit-overlay">
+                            <input type="submit" value="Замовити">
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="section-title">портфоліо</h2>
             <div class="row">
@@ -253,7 +257,7 @@
         </div>
     </section>
 
-    <section class="partners">
+    <section class="partners" id="partners">
         <div class="container">
             <h2 class="section-title">Наші партнери</h2>
             <div class="row">
@@ -301,7 +305,7 @@
         </div>
     </section>
 
-    <section class="map">
+    <section class="map" id="contacts">
         <div class="container">
             <div class="map__form">
                 <form>
@@ -312,7 +316,9 @@
                     </ul>
                     <input type="text" name="name" placeholder="Имя *" required>
                     <input type="tel" name="phone" placeholder="Телефон *" required>
-                    <input type="submit" value="Відправити">
+                    <div class="submit-overlay">
+                        <input type="submit" value="Відправити">
+                    </div>
                 </form>
             </div>
         </div>
@@ -327,7 +333,7 @@
                 </div>
                 <div class="col-sm-6 col-3 footer__social">
                     <a href="#"><img src="./img/content/facebook-logo.svg" alt="vakosbeton"></a>
-                    <a href="#"><img src="./img/content/logo-instagram.svg" alt="vakosbeton"></a>
+                    <a href="#"><img src="./img/content/icon-instagram.svg" alt="vakosbeton"></a>
                 </div>
             </div>
         </div>

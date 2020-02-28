@@ -3,11 +3,15 @@ jQuery(document).ready(function($) {
    $('.header__slider').slick({
        arrows: true,
        asNavFor: '.header__text-slider',
+       fade: true,
+       cssEase: 'linear'
    });
 
    $('.header__text-slider').slick({
        asNavFor: '.header__slider',
-       arrows: false
+       arrows: false,
+       fade: true,
+       cssEase: 'linear'
    });
 
    $('.certificates__slider').slick({
@@ -65,6 +69,33 @@ jQuery(document).ready(function($) {
         });
         return false;
     });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+    });
+
+    window.onscroll = function() {myFunction()};
+
+  // Get the header
+  var header = document.querySelector("header__menu");
+
+  // Get the offset position of the navbar
+  var sticky = header.offsetTop;
+
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      console.log('fixed');
+    } else {
+      console.log('not fixed');
+    }
+  }
 
 });
 
