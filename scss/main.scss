@@ -10,6 +10,13 @@
 
 body.active, html.active {
     overflow-y: hidden;
+    .header__logo.sticky {
+        box-shadow: none;
+    }
+}
+
+.header.menu-sticky .header__logo {
+    display: none;
 }
 
 body {

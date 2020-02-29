@@ -96,6 +96,9 @@
             @include mediaw(991px) {
                 margin-top: 30px;
             }
+            @include mediaw(576px) {
+                padding: 0 25px;
+            }
             img {
                 display: block;
                 margin: 0 auto;
@@ -236,10 +239,10 @@
             background-size: cover;
             z-index: 1;
             &.slick-prev {
-                background-image: url(../img/elements/left-arrow-gradient.png);
+                background-image: url(../img/elements/left-arrow-gradient.svg);
             }
             &.slick-next {
-                background-image: url(../img/elements/right-arrow-gradient.png);
+                background-image: url(../img/elements/right-arrow-gradient.svg);
             }
             &::before {
                 display: none;
