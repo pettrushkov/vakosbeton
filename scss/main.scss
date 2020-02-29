@@ -8,24 +8,25 @@
 @import 'home';
 @import 'footer';
 
+body.active, html.active {
+    overflow-y: hidden;
+}
+
 body {
     font-family: $fontProximaNovaLight;
     font-size: 18px;
     line-height: 22px;
-    // overflow-x: hidden;
     @include mediaw(576px) {
         font-size: 15px;
         line-height: 17px;
     }
 }
 
-#menu-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+.menu-btn {
+    position: relative;
     width: 30px;
     height: 30px;
-    z-index: 777;
+    z-index: 1234;
     display: none;
     align-items: center;
     cursor: pointer;

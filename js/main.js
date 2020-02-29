@@ -36,9 +36,11 @@ jQuery(document).ready(function($) {
       ]
    });
 
-   $('#menu-btn').click(function() {
+   $('.menu-btn').click(function() {
        $('.header__menu').toggleClass('active');
-       $(this).toggleClass('active');
+       $('.menu-btn').toggleClass('active');
+       $('body').toggleClass('active');
+       $('html').toggleClass('active');
    });
 
    $('.modal--close').click(function() {
@@ -80,22 +82,45 @@ jQuery(document).ready(function($) {
       });
     });
 
-    window.onscroll = function() {myFunction()};
 
-  // Get the header
-  var header = document.querySelector("header__menu");
+    //sticky header menu
+    window.onscroll = function() {isStickyMenu()};
+    var headerMenu = document.getElementById("header__menu");
+    var header = document.getElementById("header");
+    var mobileHeaderMenu = document.getElementById("header__logo");
 
-  // Get the offset position of the navbar
-  var sticky = header.offsetTop;
+    // Get the offset position of the navbar
+    var sticky = headerMenu.offsetTop;
 
-  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      console.log('fixed');
+  function isStickyMenu() {
+    if ($(window).width() >= 768) {
+      if (window.pageYOffset > sticky) {
+        headerMenu.classList.add('sticky');
+        header.classList.add('menu-sticky');
+      } else {
+        headerMenu.classList.remove('sticky');
+        header.classList.remove('menu-sticky');
+      }
+    } else {if (window.pageYOffset > sticky) {
+      mobileHeaderMenu.classList.add('sticky');
+      header.classList.add('menu-sticky');
     } else {
-      console.log('not fixed');
+      mobileHeaderMenu.classList.remove('sticky');
+      header.classList.remove('menu-sticky');
+    }
     }
   }
+
+  $('.header__menu a').click(function() {
+    if ($(window).width() < 768) {
+      $('.header__menu').removeClass('active');
+      $('body').removeClass('active');
+      $('html').removeClass('active');
+      $('.menu-btn').removeClass('active');
+    }
+  })
+
+
 
 });
 

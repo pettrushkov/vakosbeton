@@ -1,6 +1,12 @@
 .header {
     height: 653px;
     position: relative;
+    &.menu-sticky {
+        padding-top: 204px;
+        @include mediaw(767px) {
+            padding-top: 78px;
+        }
+    }
     @include mediaw(991px) {
         height: initial;
         padding-bottom: 80px;
@@ -50,7 +56,7 @@
             @include mediaw(576px) {
                 width: 34px;
                 height: 38px;
-                top: 222px;
+                top: 160px;
             }
             &.slick-prev {
                 background-image: url(../img/elements/left-arrow.svg);
@@ -91,7 +97,33 @@
     }
     &__logo-phones {
         padding: 20px 0;
+        .row {
+            @include mediaw(767px) {
+                flex-direction: column-reverse;
+            }
+        }
     }
+    &__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background-color: #0b436c;
+            box-shadow: 0px 5px 25px 5px rgba(0,0,0,0.75);
+            overflow-y: hidden;
+            padding: 10px 15px;
+        }
+        img {
+            @include mediaw(576px) {
+                max-width: 170px;
+            }
+        }
+    } 
     &__phones {
         font-family: $fontProximaNovaBold;
         color: #fff;
@@ -99,7 +131,7 @@
         justify-content: flex-end;
         @include mediaw(767px) {
             display: block;
-            margin-top: 15px;
+            margin-bottom: 15px;
             font-size: 16px;
         }
         ul {
@@ -138,6 +170,16 @@
                 transform: translateX(0);
             }
         }
+        &.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1111;
+            background-color: #0b436c;
+            box-shadow: 0px 5px 25px 5px rgba(0,0,0,0.75);
+            overflow-y: hidden;
+        }
         &::before {
             content: " ";
             display: block;
@@ -151,13 +193,21 @@
                 display: none;
             }
         }
+        .header__logo {
+            display: none;
+            @include mediaw(767px) {
+                display: flex;
+                padding: 20px 0;
+                margin-bottom: 50px;
+            }
+        }
         .container {
             list-style: none;
             display: flex;
             justify-content: center;
+            align-items: center;
             @include mediaw(767px) {
                 display: block;
-                padding-top: 100px;
             }
             li {
                 padding: 0 30px;
@@ -173,6 +223,7 @@
                     position: relative;
                     padding: 15px 0;
                     text-transform: uppercase;
+                    text-align: center;
                     @include mediaw(767px) {
                         padding: 7px 0;
                     }
@@ -203,6 +254,11 @@
         color: #fff;
         line-height: 50px;
         max-width: 550px;
+        @include mediaw(991px) {
+            text-align: center;
+            max-width: initial;
+            padding: 0 35px;
+        }
         @include mediaw(576px) {
             line-height: 35px;
             padding: 0 30px;
@@ -219,6 +275,8 @@
             font-size: 20px;
             @include mediaw(576px) {
                 font-size: 18px;
+                line-height: 21px;
+                margin-top: 10px;
             }
         }
     }
@@ -351,22 +409,45 @@
             color: #fff;
             padding: 35px 40px 30px;
             box-shadow: 0px 9px 8px 0px rgba(0,0,0,0.13);
-            transition: text-align .3s;
             &:hover {
-                text-align: center;
+                .image-block img, .title, .description {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include mediaw(767px) {
+                        left: initial;
+                        transform: initial;
+                    }
+                }
             }
             @include mediaw(576px) {
                 padding: 25px 28px 21px;
                 margin: 0 15px;
             }
-            .image-block img {
-                height: 50px;
+            .image-block {
+                @include mediaw(767px) {
+                    text-align: center;
+                }
+                img {
+                    height: 50px;
+                    position: relative;
+                    display: inline-block;
+                    left: 0;
+                    transition: left .3s, transform .3s;
+                }
             }
             .title {
                 margin-top: 20px;
                 font-family: $fontProximaNovaBold;
                 font-size: 22px;
                 line-height: 26px;
+                display: inline-block;
+                position: relative;
+                left: 0;
+                transition: left .3s, transform .3s;
+                @include mediaw(767px) {
+                    width: 100%;
+                    text-align: center;
+                }
                 @include mediaw(576px) {
                     line-height: 18px;
                     margin-top: 14px;
@@ -379,6 +460,15 @@
                 font-size: 16px;
                 line-height: 20px;
                 max-width: 260px;
+                display: inline-block;
+                position: relative;
+                left: 0;
+                transition: left .3s, transform .3s;
+                @include mediaw(767px) {
+                    width: 100%;
+                    text-align: center;
+                    max-width: initial;
+                }
                 @include mediaw(576px) {
                     font-size: 14px;
                     line-height: 14px;

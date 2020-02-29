@@ -13,7 +13,7 @@
 </head>
 <body>
     
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__slider">
             <div class="header__slide">
                 <img src="./img/content/image123.png" alt="vakosbeton">
@@ -28,8 +28,13 @@
         <div class="container">
             <div class="header__logo-phones">
                 <div class="row">
-                    <div class="col-md-6 header__logo">
-                        <img src="./img/content/logo.png" alt="vakosbeton">
+                    <div class="col-md-6 header__logo" id="header__logo">
+                        <div class="image-block">
+                            <img src="./img/content/logo.png" alt="vakosbeton">
+                        </div>
+                        <div class="menu-btn">
+                            <span></span>
+                        </div>
                     </div>
                     <div class="col-md-6 header__phones">
                         <ul>
@@ -40,8 +45,16 @@
                 </div>
             </div>
         </div>
-        <menu class="header__menu">
+        <menu class="header__menu" id="header__menu">
             <div class="container">
+                <div class="header__logo">
+                    <div class="image-block">
+                        <img src="./img/content/logo.png" alt="vakosbeton">
+                    </div>
+                    <div class="menu-btn">
+                        <span></span>
+                    </div>
+                </div>
                 <li><a href="#advantages">Переваги</a></li>
                 <li><a href="#how_we_work">Як ми працюємо</a></li>
                 <li><a href="#portfolio">Портфоліо</a></li>
@@ -133,7 +146,7 @@
             <h2 class="section-title">Як ми працюємо</h2>
             <div class="how__content">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="how__item how__item--first">
                             <p class="title">заявка</p>
                             <p class="description">Заповніть форму на сайті</p>
@@ -147,7 +160,7 @@
                             <p class="description">Ми допоможемо разрахувати об'єм</p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="how__item how__item--fourth">
                             <p class="title">Оплата</p>
                             <p class="description">Ви оплачуєте заказ, як Вам зручно</p>
@@ -217,37 +230,37 @@
         <div class="container">
             <h2 class="section-title">портфоліо</h2>
             <div class="row">
-                <div class="col-lg-4 col-sm-6 portfolio__item">
+                <div class="col-md-4 col-sm-6 portfolio__item">
                     <div class="image-block">
                         <img src="./img/content/portfolio1.png" alt="vakosbeton">
                         <a data-fancybox="portfolio" href="./img/content/portfolio1.png" class="title"><span>Бетон для промислової підлоги</span></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 portfolio__item">
+                <div class="col-md-4 col-sm-6 portfolio__item">
                     <div class="image-block">
                         <img src="./img/content/portfolio2.png" alt="vakosbeton">
                         <a data-fancybox="portfolio" href="./img/content/portfolio2.png" class="title"><span>Бетон для промислової підлоги</span></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 portfolio__item">
+                <div class="col-md-4 col-sm-6 portfolio__item">
                     <div class="image-block">
                         <img src="./img/content/portfolio3.png" alt="vakosbeton">
                         <a data-fancybox="portfolio" href="./img/content/portfolio3.png" class="title"><span>Бетон для промислової підлоги</span></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 portfolio__item">
+                <div class="col-md-4 col-sm-6 portfolio__item">
                     <div class="image-block">
                         <img src="./img/content/portfolio4.png" alt="vakosbeton">
                         <a data-fancybox="portfolio" href="./img/content/portfolio4.png" class="title"><span>Бетон для промислової підлоги</span></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 portfolio__item">
+                <div class="col-md-4 col-sm-6 portfolio__item">
                     <div class="image-block">
                         <img src="./img/content/portfolio5.png" alt="vakosbeton">
                         <a data-fancybox="portfolio" href="./img/content/portfolio5.png" class="title"><span>Бетон для промислової підлоги</span></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 portfolio__item">
+                <div class="col-md-4 col-sm-6 portfolio__item">
                     <div class="image-block">
                         <img src="./img/content/portfolio6.png" alt="vakosbeton">
                         <a data-fancybox="portfolio" href="./img/content/portfolio6.png" class="title"><span>Бетон для промислової підлоги</span></a>
@@ -338,10 +351,6 @@
             </div>
         </div>
     </footer>
-
-    <div id="menu-btn">
-        <span></span>
-    </div>
 
     <div class="modal--overlay">
         <div class="modal">
