@@ -1,3 +1,10 @@
+// body > .header__logo {
+//     display: none;
+//     @include mediaw(767px) {
+//         display: flex;
+//     }
+// }
+
 .header {
     height: 653px;
     position: relative;
@@ -11,30 +18,30 @@
         height: initial;
         padding-bottom: 80px;
     }
-    &::before {
-        content: " ";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url(../img/elements/header-figure.png);
-        background-repeat: no-repeat;
-        background-position: calc(100% + 50px) calc(100% + 90px);
-        z-index: 2;
-    }
-    &::after {
-        content: " ";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(12, 154, 206, 0.5);
-        z-index: 1;
-    }
+    // &::before {
+    //     content: " ";
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     background-image: url(../img/elements/header-figure.png);
+    //     background-repeat: no-repeat;
+    //     background-position: calc(100% + 50px) calc(100% + 90px);
+    //     z-index: 2;
+    // }
+    // &::after {
+    //     content: " ";
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     background-color: rgba(12, 154, 206, 0.5);
+    //     z-index: 1;
+    // }
     &__slider {
         position: absolute;
         top: 0;
@@ -211,7 +218,7 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            align-items: center;
+            // align-items: center;
             @include mediaw(767px) {
                 display: block;
             }
@@ -416,7 +423,7 @@
             padding: 35px 40px 30px;
             box-shadow: 0px 9px 8px 0px rgba(0,0,0,0.13);
             &:hover {
-                .image-block img, .title, .description {
+                .image-block img, .title {
                     left: 50%;
                     transform: translateX(-50%);
                     @include mediaw(767px) {
@@ -469,7 +476,7 @@
                 display: inline-block;
                 position: relative;
                 left: 0;
-                transition: left .3s, transform .3s;
+                // transition: left .3s, transform .3s;
                 @include mediaw(767px) {
                     width: 100%;
                     text-align: center;

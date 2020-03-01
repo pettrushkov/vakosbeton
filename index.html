@@ -16,19 +16,19 @@
     <header class="header" id="header">
         <div class="header__slider">
             <div class="header__slide">
-                <img src="./img/content/image123.png" alt="vakosbeton">
+                <img src="./img/content/image123.jpg" alt="vakosbeton">
             </div>
             <div class="header__slide">
-                <img src="./img/content/image123.png" alt="vakosbeton">
+                <img src="./img/content/image123.jpg" alt="vakosbeton">
             </div>
             <div class="header__slide">
-                <img src="./img/content/image123.png" alt="vakosbeton">
+                <img src="./img/content/image123.jpg" alt="vakosbeton">
             </div>
         </div>
         <div class="container">
             <div class="header__logo-phones">
                 <div class="row">
-                    <div class="col-md-6 header__logo">
+                    <div class="col-md-6 header__logo" id="header__logo">
                         <div class="image-block">
                             <img src="./img/content/logo.png" alt="vakosbeton">
                         </div>
@@ -84,7 +84,7 @@
                     <p class="title">Залишити заявку</p>
                     <form>
                         <input type="text" name="name" placeholder="Имя *" required>
-                        <input type="tel" name="phone" placeholder="Телефон *" required>
+                        <input type="tel" name="phone" class="phone-mask" placeholder="Телефон *" required>
                         <div class="submit-overlay">
                             <input type="submit" value="Замовити">
                         </div>
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <div class="header__advantages">
+        <div class="header__advantages" id="advantages">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 header__advantages-item">
@@ -121,14 +121,14 @@
         </div>
     </header>
     
-    <div class="col-md-6 header__logo" id="header__logo">
+    <!-- <div class="col-md-6 header__logo" id="header__logo">
         <div class="image-block">
             <img src="./img/content/logo.png" alt="vakosbeton">
         </div>
         <div class="menu-btn">
             <span></span>
         </div>
-    </div>
+    </div> -->
 
     <section class="offer">
         <div class="container">
@@ -223,7 +223,7 @@
                         <input type="text" name="name" placeholder="Имя *" required>
                     </div>
                     <div class="col-md-4">
-                        <input type="tel" name="phone" placeholder="Телефон *" required>
+                        <input type="tel" name="phone" class="phone-mask" placeholder="Телефон *" required>
                     </div>
                     <div class="col-md-4">
                         <div class="submit-overlay">
@@ -337,12 +337,13 @@
                         <li><a href="" class="location">Тячів, вул. Промислова 7</a></li>
                     </ul>
                     <input type="text" name="name" placeholder="Имя *" required>
-                    <input type="tel" name="phone" placeholder="Телефон *" required>
+                    <input type="tel" name="phone" class="phone-mask" placeholder="Телефон *" required>
                     <div class="submit-overlay">
                         <input type="submit" value="Відправити">
                     </div>
                 </form>
             </div>
+            <div class="map__marker"></div>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1334.4944288305483!2d23.589297466059023!3d48.01392514172881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4737913091a801f7%3A0xe6491620bd2241d2!2zVkFLT1Mg0JHQldCi0J7QnQ!5e0!3m2!1sru!2sua!4v1582740082733!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </section>

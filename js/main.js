@@ -120,7 +120,12 @@ jQuery(document).ready(function($) {
     }
   })
 
-
+  $('.phone-mask').mask('+38 (000) 000-00-00');
+  $('.phone-mask').click(function() {
+    if($(this).val() == '') {
+        $(this).val('+38 (')
+    }
+  });
 
 });
 
