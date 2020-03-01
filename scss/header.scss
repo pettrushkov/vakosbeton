@@ -137,7 +137,7 @@
         display: flex;
         justify-content: flex-end;
         @include mediaw(767px) {
-            display: block;
+            display: flex;
             margin-bottom: 15px;
             font-size: 16px;
         }

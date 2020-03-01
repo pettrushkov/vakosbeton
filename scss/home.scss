@@ -247,8 +247,6 @@
             &::before {
                 display: none;
             }
-            &:hover {
-            }
         }
         .slick-list {
             margin: 0 -15px;
@@ -332,6 +330,9 @@
             position: relative;
             border-radius: 3px;
             overflow: hidden;
+            @include mediaw(767px) {
+                margin-top: 15px;
+            }
             &::before {
                 content: " ";
                 display: block;
