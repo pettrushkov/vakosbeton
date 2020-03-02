@@ -31,11 +31,14 @@ body {
 
 .menu-btn {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #047ee9;
     z-index: 1234;
     display: none;
     align-items: center;
+    padding: 10px;
     cursor: pointer;
     @include mediaw(767px) {
         display: flex;
