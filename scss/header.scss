@@ -8,12 +8,13 @@
 .header {
     height: 653px;
     position: relative;
-    // &.menu-sticky {
-    //     padding-top: 204px;
-    //     @include mediaw(767px) {
-    //         padding-top: 78px;
-    //     }
-    // }
+    &.menu-sticky {
+        .header__menu {
+            @include mediaw(767px) {
+                top: 59px;
+            }
+        }
+    }
     @include mediaw(991px) {
         height: initial;
         padding-bottom: 80px;
@@ -178,20 +179,20 @@
         z-index: 23;
         @include mediaw(767px) {
             position: fixed;
-            top: 130px;
+            top: 125px;
             left: 0;
             width: 100%;
             max-width: 420px;
-            transform: translateX(-100%);
+            transform: translateX(-120%);
             margin-bottom: 0;
-            z-index: 777;
+            z-index: 12779;
             transition: transform .3s;
             background-color: #fff;
+            box-shadow: 0 5px 25px 5px rgba(0,0,0,.75);
         }
         &.active {
             @include mediaw(767px) {
                 transform: translateX(0);
-                top: 55px;
                 padding: 20px 0;
             }
         }
@@ -260,7 +261,7 @@
                         padding: 7px 0;
                         color: #000;
                         padding: 10px;
-                        text-align: left;
+                        // text-align: left;
                     }
                     &::after {
                         content: " ";
@@ -432,13 +433,18 @@
     &__advantages {
         position: absolute;
         z-index: 2;
-        bottom: 0;
+        padding-top: 100px;
+        bottom: 100px;
         transform: translateY(calc(100% - 55px)) translateX(-50%);
         left: 50%;
         width: 100%;
         .container {
-            background-color: #083D62;
-            box-shadow: 0px 9px 8px 0px rgba(0,0,0,0.13);
+            // background-color: #083D62;
+            // box-shadow: 0px 9px 8px 0px rgba(0,0,0,0.13);
+            @include mediaw(767px) {
+                padding-top: 120px;
+                bottom: 0;
+            }
             @include mediaw(576px) {
                 margin: 0 15px;
                 padding: 0;
@@ -449,6 +455,7 @@
             color: #fff;
             padding: 35px 40px 30px;
             box-shadow: 0px 9px 8px 0px rgba(0,0,0,0.13);
+            background-color: #083D62;
             &:hover {
                 .image-block img, .title {
                     left: 50%;
