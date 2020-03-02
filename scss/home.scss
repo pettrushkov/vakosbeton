@@ -525,6 +525,24 @@
             @include mediaw(767px) {
                 display: none;
             }
+            &::before, &::after {
+                content: " ";
+                display: block;
+                width: 52px;
+                height: 57px;
+                background-image: url(../img/elements/placeholder.svg);
+                background-size: cover;
+                position: absolute;
+                z-index: 1;
+            }
+            &::before {
+                top: 91px;
+                left: 155px;
+            }   
+            &::after {
+                top: 207px;
+                left: 254px;
+            }
         }
     }
     &__form {
@@ -532,12 +550,13 @@
         padding: 20px 30px 30px;
         max-width: 350px;
         margin-left: auto;
+        box-shadow: 0px 5px 29px 0px rgba(0,0,0,0.07);
         @include mediaw(991px) {
             position: relative;
         }
         @include mediaw(768px) {
             margin: 20px auto;
-            box-shadow: 0 6px 20px 0 rgba(0,0,0,.13);
+            // box-shadow: 0 6px 20px 0 rgba(0,0,0,.13);
         }
         .title {
             font-family: $fontProximaNovaRegular;
